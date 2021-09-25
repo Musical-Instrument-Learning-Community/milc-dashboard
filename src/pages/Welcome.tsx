@@ -3,9 +3,10 @@ import { LikeOutlined } from '@ant-design/icons'
 import { PageContainer } from '@ant-design/pro-layout'
 import { Descriptions, Result, Space, Statistic } from 'antd'
 import { mockUser } from '../mockData'
+import { UserProps } from '../types'
 
 export default function Welcome() {
-	const [user, setUser] = useState<any>(null)
+	const [user, setUser] = useState<UserProps | null>(null)
 
 	useEffect(() => {
 		// todo: fetch user data here by api

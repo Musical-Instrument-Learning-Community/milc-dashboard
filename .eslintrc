@@ -35,7 +35,7 @@
 				"ignoreRestArgs": true
 			}
 		],
-		"indent": [2, "tab"],
+		"indent": ["error", "tab", { "SwitchCase": 1 }],
 		"max-len": [
 			"warn",
 			{

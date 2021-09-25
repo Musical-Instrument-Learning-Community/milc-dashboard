@@ -16,6 +16,7 @@ export default function Dashboard() {
 		<div id='test-pro-layout' style={{ height: '100vh' }}>
 			<ProLayout
 				{...defaultProps}
+				{...settings}
 				title='MILC'
 				// todo: logo=''
 				location={{ pathname }}
@@ -35,7 +36,6 @@ export default function Dashboard() {
 						<Avatar shape='square' size='small' icon={<UserOutlined />} />
 					</div>
 				)}
-				{...settings}
 			>
 				{(() => {
 					switch (pathname) {
