@@ -1,26 +1,29 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import './App.css'
+import Auth from './pages/Auth'
+import Dashboard from './pages/Dashboard'
+import { ConfigProvider } from 'antd'
+import enUS from 'antd/lib/locale/en_US'
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	return (
+		<ConfigProvider locale={enUS}>
+			<Router>
+				<Switch>
+					<Route path='/auth'>
+						<Auth />
+					</Route>
+					<Route path='/dashboard'>
+						<Dashboard />
+					</Route>
+					<Route path='/'>
+						<Auth />
+					</Route>
+				</Switch>
+			</Router>
+		</ConfigProvider>
+	)
 }
 
-export default App;
+export default App
