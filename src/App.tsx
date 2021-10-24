@@ -5,6 +5,7 @@ import Auth from './pages/Auth'
 import Dashboard from './pages/Dashboard'
 import { ConfigProvider } from 'antd'
 import enUS from 'antd/lib/locale/en_US'
+import { PreviewSection } from './components/PreviewSection/PreviewSection'
 
 function App() {
 	return (
@@ -19,6 +20,7 @@ function App() {
 					</Route>
 					<Route path='/'>
 						<Auth />
+						<PreviewSection/>
 					</Route>
 				</Switch>
 			</Router>
